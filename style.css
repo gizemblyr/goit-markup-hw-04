@@ -154,6 +154,17 @@ address a {
 .feature-list-item {
   width: calc((100%-72px) / 4);
 }
+
+.svg-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
+  background-color: #f4f4fd;
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
+  margin-bottom: 8px;
+}
 .feature-item-title {
   margin-bottom: 8px;
 }
@@ -172,12 +183,42 @@ address a {
   flex-basis: calc((100% - 3 * 24px) / 4);
   border-radius: 0px 0px 4px 4px;
   background-color: white;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .container-team-member {
   padding: 32px 0;
 }
-.container-team-member {
-  padding: 32px 0;
+
+.team-member-item-title {
+  margin-bottom: 8px;
+}
+.social-media-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.social-media-item {
+  width: 40px;
+  height: 40px;
+}
+.social-media-link {
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon {
+  fill: #f4f4fd;
+}
+.social-media-link:hover {
+  background-color: #404bbf;
+}
+.social-media-link:focus {
+  background-color: #404bbf;
 }
 .team-member-item-name {
   text-align: center;
