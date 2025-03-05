@@ -242,12 +242,47 @@ address a {
   row-gap: 48px;
 }
 .li-portfolio-item {
+  min-width: 360px;
+  min-height: 300px;
+  
   flex-basis: calc((100% - 72px) / 4);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* Starts slow (0.4, 0) → The animation begins with a gentle acceleration. Ends slow (0.2, 1) → It decelerates smoothly toward the end.*/
 }
-.li-portfolio-item div {
-  padding: 32px 16px;
+.li-portfolio-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08); /*offset-x offset-y blur-radius spread-radius color;*/
+}
+.li-portfolio-item:hover div p {
+  transform: translateY(0%);
+}
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-details-text {
+  position: absolute;
+  top: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.002em;
+  color: #f4f4fd;
+  padding: 40px 32px;
+  background-color: #4d5ae5;
+  height: 100%;
+  width: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.li-portfolio-item  {
+  /*padding: 32px 16px;*/
   border: 1px solid #e7e9fc;
   border-top: none;
+}
+.portfolio-title{
+  margin:32px 16px;
 }
 .li-portfolio-item div h3 {
   margin-bottom: 8px;
